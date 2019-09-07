@@ -1,0 +1,17 @@
+def string(phr):
+    capital=phr.capitalize()
+    
+    if phr.startswith(("how","what","why","where","when")):
+        return "{}?".format(capital)
+    else:
+        return "{}.".format(capital)
+
+result=[]
+while (1):
+    user_input=input("say something:")
+    if user_input=="end":
+        break
+    else:
+        result.append(string(user_input))
+x=' '.join(result)
+print(x)
